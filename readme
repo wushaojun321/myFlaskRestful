@@ -1,0 +1,14 @@
+项目构成usr
+    基于blueprint的redprint
+        1)为什么这么搞？
+            因为使用原生的blueprint只能实现注册一层,如果想要实现两层注册的话，用blueprint是无法实现的
+        2)怎么搞的？
+            使用blueprint提供的add_url_rule接口将第二层视图函数直接注册到flask对象上，
+            注册过程中加入我们需要的功能,比如url_prefiex,
+
+表单验证
+    wtform
+        1)如何使它支持json格式？
+            只需要显式的传入data字典即可
+
+异常处理
