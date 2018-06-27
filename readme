@@ -10,5 +10,8 @@
     wtform
         1)如何使它支持json格式？
             只需要显式的传入data字典即可
+        2)如何在验证的时候发现不合法字段，自动返回，减少代码量？
+            重写Form模块，手动在验证失败之后返回自定义的Exception，所有的validatorForm继承重写后的Form
 
 异常处理
+    编写继承werkzeug.exceptions.HTTPException的APIRequestException，构造response
